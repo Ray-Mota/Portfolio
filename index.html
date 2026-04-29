@@ -38,12 +38,12 @@
         <div class="about-content">
             <div class="about-text">
                 <p>
-                    Olá! Sou estudante do ensino médio com grande interesse em desenvolvimento web. 
+                    Olá! Sou estudante do ensino médio com grande interesse em desenvolvimento FullStack. 
                     Estou estudando e praticando para me tornar um desenvolvedor completo.
                 </p>
                 <p>
                     Minha jornada começou com curiosidade sobre como sites funcionam, e hoje já domino 
-                    os fundamentos de HTML, CSS e JavaScript. Busco minha primeira experiência profissional 
+                    os fundamentos de HTML, CSS e JavaScript, além de estar estudando PHP e Laravel. Busco minha primeira experiência profissional 
                     onde possa contribuir, aprender e evoluir junto com uma equipe.
                 </p>
                 <p>
@@ -124,7 +124,28 @@
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-image"></div>
+                <div class="project-image" style="padding:0; font-family:monospace; font-size:11px; line-height:1.6;">
+            <div style="background:#1e1e2e; width:100%; height:100%; display:flex; flex-direction:column;">
+                <div style="display:flex; align-items:center; gap:6px; padding:8px 12px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                <span style="color:#6c7086; margin-left:8px; font-size:10px;">ecoscience.js</span>
+                </div>
+                <div style="padding:14px 16px; color:#cdd6f4;">
+                <div><span style="color:#cba6f7;">class</span> <span style="color:#89b4fa;">EcoScience</span> {</div>
+                <div style="padding-left:16px;"><span style="color:#cba6f7;">constructor</span>() {</div>
+                <div style="padding-left:32px;"><span style="color:#cba6f7;">this</span>.<span style="color:#89dceb;">env</span> = <span style="color:#a6e3a1;">"amazônia"</span>;</div>
+                <div style="padding-left:32px;"><span style="color:#cba6f7;">this</span>.<span style="color:#89dceb;">co2</span> = <span style="color:#fab387;">412</span>;</div>
+                <div style="padding-left:16px;">}</div>
+                <div style="padding-left:16px; margin-top:4px;"><span style="color:#89b4fa;">analisar</span>() {</div>
+                <div style="padding-left:32px;"><span style="color:#cba6f7;">return</span> { <span style="color:#89dceb;">status</span>: <span style="color:#a6e3a1;">"estável"</span>, <span style="color:#89dceb;">alerta</span>: <span style="color:#cba6f7;">false</span> }</div>
+                <div style="padding-left:16px;">}</div>
+                <div>}</div>
+                </div>
+            </div>
+            </div>
+
                 <div class="project-content">
                     <h3>Ecoscience</h3>
                     <p>Aplicação web para guiamento, interação e análise de dados ambentais no seu cotidiano.</p>
@@ -140,9 +161,29 @@
             
             <!-- Projeto 3 -->
             <div class="project-card">
-                <div class="project-image">
-
-                </div>
+                <div class="project-image" style="padding:0; font-family:monospace; font-size:11px; line-height:1.6; overflow:hidden;">
+                    <div style="background:#1e1e2e; width:100%; height:100%; display:flex; flex-direction:column;">
+                        <div style="display:flex; align-items:center; gap:6px; padding:8px 12px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                        <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                        <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                        <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                        <span style="color:#6c7086; margin-left:8px; font-size:10px;">cep.js</span>
+                        </div>
+                        <div style="padding:14px 16px; color:#cdd6f4;">
+                        <div><span style="color:#6c7086;">// busca endereço por CEP</span></div>
+                        <div style="margin-top:4px;"><span style="color:#cba6f7;">async function</span> <span style="color:#89b4fa;">consultarCEP</span>(cep) {</div>
+                        <div style="padding-left:16px;"><span style="color:#cba6f7;">const</span> url = <span style="color:#a6e3a1;">`viacep.com/ws/<span style="color:#89dceb;">${cep}</span>/json`</span>;</div>
+                        <div style="padding-left:16px; margin-top:2px;"><span style="color:#cba6f7;">const</span> res = <span style="color:#cba6f7;">await</span> <span style="color:#89b4fa;">fetch</span>(url);</div>
+                        <div style="padding-left:16px;"><span style="color:#cba6f7;">const</span> data = <span style="color:#cba6f7;">await</span> res.<span style="color:#89b4fa;">json</span>();</div>
+                        <div style="padding-left:16px; margin-top:4px;"><span style="color:#cba6f7;">return</span> {</div>
+                        <div style="padding-left:32px;"><span style="color:#89dceb;">rua</span>: data.<span style="color:#89dceb;">logradouro</span>,</div>
+                        <div style="padding-left:32px;"><span style="color:#89dceb;">cidade</span>: data.<span style="color:#89dceb;">localidade</span>,</div>
+                        <div style="padding-left:32px;"><span style="color:#89dceb;">estado</span>: data.<span style="color:#89dceb;">uf</span></div>
+                        <div style="padding-left:16px;">}</div>
+                        <div>}</div>
+                        </div>
+                    </div>
+                    </div>
                 <div class="project-content">
                     <h3>Consulta de CEP</h3>
                     <p>Aplicação de estudo de API's de consulta de CEP.</p>
@@ -157,7 +198,27 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image"></div>
+                <div class="project-image" style="padding:0; font-family:monospace; font-size:11px; line-height:1.6; overflow:hidden;">
+                <div style="background:#1e1e2e; width:100%; height:100%; display:flex; flex-direction:column;">
+                    <div style="display:flex; align-items:center; gap:6px; padding:8px 12px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                    <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                    <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                    <span style="color:#6c7086; margin-left:8px; font-size:10px;">tarefas.js</span>
+                    </div>
+                    <div style="padding:14px 16px; color:#cdd6f4;">
+                    <div><span style="color:#cba6f7;">const</span> tarefas = [</div>
+                    <div style="padding-left:16px;">{ <span style="color:#89dceb;">tarefa</span>: <span style="color:#a6e3a1;">"estudar CSS"</span>, <span style="color:#89dceb;">feito</span>: <span style="color:#cba6f7;">true</span>  },</div>
+                    <div style="padding-left:16px;">{ <span style="color:#89dceb;">tarefa</span>: <span style="color:#a6e3a1;">"fazer PR"</span>,    <span style="color:#89dceb;">feito</span>: <span style="color:#cba6f7;">true</span>  },</div>
+                    <div style="padding-left:16px;">{ <span style="color:#89dceb;">tarefa</span>: <span style="color:#a6e3a1;">"deploy"</span>,       <span style="color:#89dceb;">feito</span>: <span style="color:#f38ba8;">false</span> },</div>
+                    <div>];</div>
+                    <div style="margin-top:6px;"><span style="color:#cba6f7;">const</span> pendentes = tarefas.<span style="color:#89b4fa;">filter</span>(</div>
+                    <div style="padding-left:16px;">t => !<span style="color:#89dceb;">t</span>.<span style="color:#89dceb;">feito</span></div>
+                    <div>);</div>
+                    <div style="margin-top:4px;"><span style="color:#6c7086;">// pendentes.length → 1</span></div>
+                    </div>
+                </div>
+                </div>
                 <div class="project-content">
                     <h3>Organizador de Tarefas</h3>
                     <p>Aplicação para organização de tarefas diárias.</p>
@@ -172,7 +233,27 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image"></div>
+                <div class="project-image" style="padding:0; font-family:monospace; font-size:11px; line-height:1.6; overflow:hidden;">
+                <div style="background:#1e1e2e; width:100%; height:100%; display:flex; flex-direction:column;">
+                    <div style="display:flex; align-items:center; gap:6px; padding:8px 12px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                    <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                    <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                    <span style="color:#6c7086; margin-left:8px; font-size:10px;">analise.py</span>
+                    </div>
+                    <div style="padding:14px 16px; color:#cdd6f4;">
+                    <div><span style="color:#cba6f7;">import</span> pandas <span style="color:#cba6f7;">as</span> pd</div>
+                    <div><span style="color:#cba6f7;">import</span> plotly.express <span style="color:#cba6f7;">as</span> px</div>
+                    <div style="margin-top:6px;">df = pd.<span style="color:#89b4fa;">read_csv</span>(<span style="color:#a6e3a1;">"dados.csv"</span>)</div>
+                    <div>df = df.<span style="color:#89b4fa;">dropna</span>()</div>
+                    <div style="margin-top:6px;">fig = px.<span style="color:#89b4fa;">line</span>(</div>
+                    <div style="padding-left:16px;">df, x=<span style="color:#a6e3a1;">"data"</span>, y=<span style="color:#a6e3a1;">"valor"</span>,</div>
+                    <div style="padding-left:16px;">title=<span style="color:#a6e3a1;">"Tendência Mensal"</span></div>
+                    <div>)</div>
+                    <div style="margin-top:2px;">fig.<span style="color:#89b4fa;">show</span>()</div>
+                    </div>
+                </div>
+                </div>
                 <div class="project-content">
                     <h3>Projeto de Análise de Dados</h3>
                     <p>Projeto tratamento e análise de dados utilizando a python.</p>
@@ -212,7 +293,7 @@
                     </div>
                 </a>
 
-                 <a href="https://www.linkedin.com/in/ray-mota-306856406" target="_blank" class="contact-link">
+                 <a href="www.linkedin.com/in/ray-mota" target="_blank" class="contact-link">
                     <div class="contact-icon"></div>
                     <div class="contact-info">
                         <h4>Linkedin</h4>
